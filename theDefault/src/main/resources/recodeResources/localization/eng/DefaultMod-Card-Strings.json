@@ -49,5 +49,9 @@
   "recode:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
-  }
+  },
+  "recode:Strike_Re": {
+    "NAME": "Strike",
+    "DESCRIPTION": "wip"
+          }
 }

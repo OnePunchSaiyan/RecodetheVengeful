@@ -165,7 +165,7 @@ public class Recode extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList();
-        retVal.add("Strike_B");
+        retVal.add(Strike_Re.ID);
         retVal.add("Strike_B");
         retVal.add("Strike_B");
         retVal.add("Strike_B");
@@ -184,13 +184,13 @@ public class Recode extends CustomPlayer {
 
         retVal.add(PlaceholderRelic.ID);
         retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID);
+        retVal.add("Brimstone");
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
         UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
         UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
+        UnlockTracker.markRelicAsSeen("Brimstone");
 
         return retVal;
     }
@@ -220,8 +220,10 @@ public class Recode extends CustomPlayer {
     @Override
     public AbstractCard.CardColor getCardColor() {
         return AbstractCard.CardColor.BLUE;
+
     }
 
+        // Should return a String
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {return recode.DefaultMod.RECODE_ORANGE;

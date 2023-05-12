@@ -7,10 +7,10 @@
     ]
   },
   "recode:PlaceholderRelic2": {
-    "NAME": "Placeholder Relic 2",
-    "FLAVOR": "You feel stronger.",
+    "NAME": "what the dog doin?",
+    "FLAVOR": "???",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #b1 #yStrength."
+      "what the dog doin? Gain #b5 [B] at the end of your turn ."
     ]
   },
   "recode:DefaultClickableRelic": {

@@ -96,7 +96,7 @@ public class DefaultMod implements
     // Colors (RGB)
     // Character Color
     public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
-    public static final Color RECODE_ORANGE = CardHelper.getColor(255.0f, 0.0f, 255.0f);
+    public static final Color RECODE_ORANGE = CardHelper.getColor(255.0f, 165.0f, 0.0f);
     
     // Potion Colors in RGB
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
@@ -112,25 +112,25 @@ public class DefaultMod implements
   
     // Card backgrounds - The actual rectangular card.
     private static final String ATTACK_DEFAULT_GRAY = "recodeResources/images/512/bg_attack_default_gray.png";
-    private static final String ATTACK_RECODE_ORANGE = "recodeResources/images/512/bg_skill_default_gray.png";
+    private static final String ATTACK_RECODE_ORANGE = "recodeResources/images/512/bg_attack_recode_magenta.png";
     private static final String SKILL_DEFAULT_GRAY = "recodeResources/images/512/bg_skill_default_gray.png";
-    private static final String SKILL_RECODE_ORANGE = "recodeResources/images/512/bg_skill_default_grey.png";
+    private static final String SKILL_RECODE_ORANGE = "recodeResources/images/512/bg_skill_recode_magenta.png";
     private static final String POWER_DEFAULT_GRAY = "recodeResources/images/512/bg_power_default_gray.png";
-    private static final String POWER_RECODE_ORANGE = "recodeResources/images/512/bg_power_default_grey.png";
+    private static final String POWER_RECODE_ORANGE = "recodeResources/images/512/bg_power_recode_orange.png";
     
     private static final String ENERGY_ORB_DEFAULT_GRAY = "recodeResources/images/512/card_default_gray_orb.png";
-    private static final String ENERGY_ORB_RECODE_ORANGE = "recodeResources/images/512/card_default_grey_orb.png";
+    private static final String ENERGY_ORB_RECODE_ORANGE = "recodeResources/images/512/card_default_gray_orb_orange.png";
     private static final String CARD_ENERGY_ORB = "recodeResources/images/512/card_small_orb.png";
-    private static final String CARD_ENERGY_ORB_RECODE_ORANGE = "recodeResources/images/512/card_small_orb.png";
+    private static final String CARD_ENERGY_ORB_RECODE_ORANGE = "recodeResources/images/512/card_small_orb_orange.png";
     
-    private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "recodeResources/images/1024/bg_attack_default_gray";
-    private static final String ATTACK_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/bg_attack_default_gray";
+    private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "recodeResources/images/1024/bg_attack_default_gray.png";
+    private static final String ATTACK_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/bg_attack_default_gray.png";
     private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "recodeResources/images/1024/bg_skill_default_gray.png";
-    private static final String SKILL_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/bg_skill_default_grey.png";
+    private static final String SKILL_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/bg_skill_default_gray.png";
     private static final String POWER_DEFAULT_GRAY_PORTRAIT = "recodeResources/images/1024/bg_power_default_gray.png";
-    private static final String POWER_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/bg_power_default_grey.png";
+    private static final String POWER_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/bg_power_default_gray.png";
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "recodeResources/images/1024/card_default_gray_orb.png";
-    private static final String ENERGY_ORB_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/card_default_grey_orb.png";
+    private static final String ENERGY_ORB_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/card_default_gray_orb.png";
     
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "recodeResources/images/charSelect/DefaultCharacterButton.png";
@@ -201,7 +201,7 @@ public class DefaultMod implements
           \___|_||_/_/ \_\|_|\_|\___|___| |_|  |_|\___/|___/  |___||___(_)
       */
       
-        setModID( "recode" );
+        setModID("recode");
         // cool
         // TODO: NOW READ THIS!!!!!!!!!!!!!!!:
         
@@ -491,7 +491,7 @@ public class DefaultMod implements
 
         //TODO: Rename the "DefaultMod" with the modid in your ModTheSpire.json file
         //TODO: The artifact mentioned in ModTheSpire.json is the artifactId in pom.xml you should've edited earlier
-        new AutoAdd("${project.artifactId}") // ${project.artifactId}
+        new AutoAdd("recode") // ${project.artifactId}
             .packageFilter(AbstractDefaultCard.class) // filters to any class in the same package as AbstractDefaultCard, nested packages included
             .setDefaultSeen(true)
             .cards();
