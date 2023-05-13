@@ -1,0 +1,168 @@
+Attack Cards
+
+1.Vengeful Strike - Cost: 1. Deal 9 damage. If the enemy intends to attack, deal an additional 4 damage.
+
+2.Code Shatter - Cost: 2. Deal 7 damage to all enemies. Apply 1 Vulnerable.
+
+3.Rage Reboot - Cost: 0. Deal 4 damage. If you've taken damage this turn, draw 1 card.
+
+4.Backlash Protocol - Cost: 1. Deal 5 damage. If the enemy has Weak, deal an additional 5 damage.
+
+5.Virus Assault - Cost: 2. Deal 12 damage. If the enemy has any debuffs, deal an additional 3 damage.
+
+6.Firewall Fissure - Cost: 1. Deal 8 damage. If the enemy has Block, deal an additional 4 damage.
+
+7.Destructive Debug - Cost: 1. Deal 6 damage. Apply 1 Weak.
+
+8.Binary Bash - Cost: 0. Deal 2 damage. Increase the damage of all Binary Bash cards by 2 for the rest of the combat.
+
+9.Malware Mayhem - Cost: 2. Deal 14 damage. If the enemy is a Boss, apply 1 Vulnerable.
+
+10.Defragment Destruction - Cost: 3. Deal 10 damage to all enemies. If you have any Power cards active, deal an additional 5 damage.
+
+11.Data Demolition - Cost: 2. Deal 13 damage. Apply 1 Lock-On.
+
+12.Hostile Hack - Cost: 1. Deal 7 damage. If the enemy intends to buff, deal an additional 5 damage.
+
+13.Cache Crash - Cost: 2. Deal 12 damage to all enemies. If you have any debuffs, deal an additional 3 damage.
+
+14.Revenge Reformat - Cost: 1. Deal 10 damage. If the enemy has any buffs, deal an additional 6 damage.
+
+15.Trojan Torment - Cost: 3. Deal 18 damage. Apply 1 Weak and 1 Vulnerable.
+
+16.Overflow Onslaught - Cost: 1. Deal 5 damage. Increase the damage of all Overflow Onslaught cards by 2 for the rest of the combat.
+
+17.Retaliation Routine - Cost: 2. Deal 8 damage. If you've lost HP this turn, deal an additional 4 damage.
+
+18.Wipeout Wave - Cost: 2. Deal 7 damage to all enemies. Apply 1 Lock-On.
+
+19.Corruption Cleave - Cost: 3. Deal 16 damage. If the enemy has any debuffs, deal an additional 4 damage.
+
+20.Vengeance Vector - Cost: 1. Deal 8 damage. If the enemy intends to attack, gain 4 Block.
+
+21.Purge Protocol - Cost: 2. Deal 11 damage. Remove 1 debuff from Recode.
+
+22.Ruthless Rewrite - Cost: 1. Deal 6 damage. If the enemy has Block, deal an additional 3 damage.
+
+23.Spyware Slam - Cost: 2. Deal 13 damage. If the enemy is a Boss, apply 2 Weak.
+
+24.Buffer Breaker - Cost: 1. Deal 7 damage. If you've taken damage this turn, draw 1 card.
+
+25.Network Nightmare - Cost: 3. Deal 15 damage to all enemies. If you have any Power cards active, deal an additional 5 damage.
+
+26.Overload Offensive - Cost: 2. Deal 10 damage. Increase the damage of all Overload Offensive cards by 2 for the rest of the combat.
+
+27.Recoil Rehash - Cost: 1. Deal 8 damage. If the enemy has Weak, deal an additional 4 damage.
+
+28.Kernel Kill - Cost: 2. Deal 14 damage. If the enemy has any debuffs, deal an additional 3 damage.
+
+29.Adware Attack - Cost: 1. Deal 6 damage. If the enemy intends to buff, deal an additional 4 damage.
+
+30.Debug Drive - Cost: 3. Deal 10 damage to all enemies. Apply 1 Vulnerable.
+
+
+Skill Cards
+
+1.Code Shield - Cost: 1. Gain 8 Block. If you have any debuffs, gain an additional 4 Block.
+
+2.Vengeful Vigor - Cost: 0. Gain 3 Block. The next Attack card you play costs 1 less.
+
+3.Data Dive - Cost: 1. Draw 2 cards. If the enemy intends to attack, draw an additional 1 card.
+
+4.Recursive Regen - Cost: 2. Gain 4 Regen.
+
+5.Echoing Evasion - Cost: 1. Gain 5 Block. The next Skill card you play costs 1 less.
+
+6.Malware Mitigation - Cost: 1. Remove all debuffs from Recode. Draw 1 card.
+
+7.Silicon Surge - Cost: 2. Gain 12 Block. If the enemy intends to attack, gain an additional 6 Block.
+
+8.System Shock - Cost: 1. Apply 2 Weak and 2 Vulnerable to all enemies.
+
+9.Code Cleanse - Cost: 1. Remove 1 debuff from Recode. Draw 1 card.
+
+10.Error Erasure - Cost: 1. Remove all debuffs from Recode. Gain 1 Energy.
+
+11. Firewall Fortification - Cost: 2. Gain 10 Block. The next Power card you play costs 1 less.
+
+12. Virus Vaccine - Cost: 1. Remove all debuffs from all enemies. Gain 1 Energy for each debuff removed.
+
+13. Data Deflect - Cost: 1. Gain 6 Block. If the enemy intends to attack, gain an additional 3 Block.
+
+14. Backup Buffer - Cost: 0. The next time you would lose HP, prevent that damage and discard this card.
+
+15. Recursive Repair - Cost: 2. Heal 6 HP. Exhaust.
+
+16. Syntax Shield - Cost: 1. Gain 7 Block. If the enemy has Weak, gain an additional 3 Block.
+
+17. Malicious Mirror - Cost: 1. Next turn, your first attack is played twice.
+
+18. Code Counter - Cost: 1. Gain 5 Block. The next Attack card played against you this turn is reflected back at the enemy.
+
+19. Data Duplicator - Cost: 2. The next card you play is played twice. Exhaust.
+
+20. Vengeful Vault - Cost: 0. Gain 4 Block. The next Skill card you play costs 1 less.
+
+21. Cache Cleanse - Cost: 1. Draw 2 cards, then shuffle a Daze into your draw pile.
+
+22. Virus Vector - Cost: 1. Apply 2 Poison to an enemy. If the enemy has any debuffs, apply an additional 1 Poison.
+
+23. Reboot Replicate - Cost: 2. Choose an Attack or Power card from your draw pile and place it into your hand.
+
+24. Recursive Reflex - Cost: 1. The next time you would take damage, reduce that damage to 1.
+
+25. Syntax Stabilizer - Cost: 1. Remove all debuffs from Recode. Draw 1 card.
+
+26. Optimization Override - Cost: 1. The next Power card you play is played twice.
+
+27. Debug Deception - Cost: 1. Gain 5 Block. Apply 1 Weak to the enemy.
+
+28. System Saver - Cost: 2. Heal 5 HP. If you have any Power cards active, heal an additional 3 HP.
+
+1. Hyperdrive Hurl - Cost: 1. Channel 1 Hyperdrive Core. Your next Attack card deals 2 additional damage.
+
+2. Core Channel - Cost: 2. Channel 2 Hyperdrive Cores. Each Hyperdrive Core increases the damage of your next Attack card by 2 this turn.
+
+3. Overdrive Overload - Cost: 1. Evoke your next Hyperdrive Core twice.
+
+4. Core Capacity - Cost: 1. Increase your Orb slots by 1. If you have no Hyperdrive Core channeled, channel 1 Hyperdrive Core.
+
+5. Hyperdrive Harmonics - Cost: 2. Channel 1 Hyperdrive Core. Your next Skill card is played twice.
+
+*****The Hyperdrive Core is a unique Orb that increases the damage of your next Attack card by 2 for each Core channeled. When Evoked, the Hyperdrive Core increases the damage of all your Attack cards by 2 for the rest of the turn.*****
+
+Power Cards
+
+1.Binary Boost - Cost: 2. At the start of your turn, gain 1 Strength.
+
+2.Defensive Drive - Cost: 2. Whenever you play a Skill card, gain 2 Block.
+
+3.Reboot Regeneration - Cost: 2. At the start of your turn, heal 2 HP.
+
+4. Overclock Overdrive - Cost: 2. Whenever you play an Attack card, gain 2 Block and deal 2 damage to a random enemy.
+
+5. Vengeful Veil - Cost: 2. When you take damage, deal 3 damage back to the attacker.
+
+6. Network Nexus - Cost: 3. At the start of your turn, apply 1 Lock-On to a random enemy.
+
+7. Malware Manifest - Cost: 2. Whenever you apply a debuff to an enemy, apply an additional stack.
+
+8. Defragment Defense - Cost: 3. At the start of your turn, gain 2 Dexterity.
+
+9. Silicon Synapse - Cost: 2. Whenever you play a Power card, draw 1 card.
+
+10. Quantum Quicken - Cost: 3. At the start of your turn, gain 1 Energy.
+
+11. Anti-Virus Aura - Cost: 2. At the start of your turn, remove 1 debuff from Recode.
+
+12. Firewall Fortification - Cost: 2. Whenever you gain Block, gain an additional 2 Block.
+
+13. Data Dominance - Cost: 3. Your Lock-On now increases damage by 75% instead of 50%.
+
+14. Vengeance Vector - Cost: 3. Whenever you take damage, deal 3 damage to ALL enemies.
+
+15. Overload Overdrive - Cost: 2. Whenever you play an Attack card, deal 2 damage to ALL enemies.
+
+16. Binary Blessing - Cost: 1. Whenever you play a 0-cost card, draw 1 card.
+
+17. Revenge Resilience - Cost: 2. Every time you play 3 Attack cards in a single turn, gain 2 Strength.
