@@ -22,7 +22,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import recode.cards.*;
 import recode.characters.Recode;
-import recode.characters.TheDefault;
 import recode.events.IdentityCrisisEvent;
 import recode.potions.PlaceholderPotion;
 import recode.relics.BottledPlaceholderRelic;
@@ -39,34 +38,6 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-// Please don't just mass replace "theDefault" with "yourMod" everywhere.
-// It'll be a bigger pain for you. You only need to replace it in 4 places.
-// I comment those places below, under the place where you set your ID.
-
-//TODO: FIRST THINGS FIRST: RENAME YOUR PACKAGE AND ID NAMES FIRST-THING!!!
-// Right click the package (Open the project pane on the left. Folder with black dot on it. The name's at the very top) -> Refactor -> Rename, and name it whatever you wanna call your mod.
-// Scroll down in this file. Change the ID from "theDefault:" to "yourModName:" or whatever your heart desires (don't use spaces). Dw, you'll see it.
-// In the JSON strings (resources>localization>eng>[all them files] make sure they all go "yourModName:" rather than "theDefault", and change to "yourmodname" rather than "thedefault".
-// You can ctrl+R to replace in 1 file, or ctrl+shift+r to mass replace in specific files/directories, and press alt+c to make the replace case sensitive (Be careful.).
-// Start with the DefaultCommon cards - they are the most commented cards since I don't feel it's necessary to put identical comments on every card.
-// After you sorta get the hang of how to make cards, check out the card template which will make your life easier
-
-/*
- * With that out of the way:
- * Welcome to this super over-commented Slay the Spire modding base.
- * Use it to make your own mod of any type. - If you want to add any standard in-game content (character,
- * cards, relics), this is a good starting point.
- * It features 1 character with a minimal set of things: 1 card of each type, 1 debuff, couple of relics, etc.
- * If you're new to modding, you basically *need* the BaseMod wiki for whatever you wish to add
- * https://github.com/daviscook477/BaseMod/wiki - work your way through with this base.
- * Feel free to use this in any way you like, of course. MIT licence applies. Happy modding!
- *
- * And pls. Read the comments.
- */
 
 @SpireInitializer
 public class DefaultMod implements
@@ -76,8 +47,6 @@ public class DefaultMod implements
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber {
-    // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
-    // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
     private static String modID;
 
@@ -87,15 +56,15 @@ public class DefaultMod implements
     public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
 
     //This is for the in-game mod settings panel.
-    private static final String MODNAME = "Default Mod";
-    private static final String AUTHOR = "Gremious"; // And pretty soon - You!
-    private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
+    private static final String MODNAME = "Recode the Vengeful One";
+    private static final String AUTHOR = "OnePunch";
+    private static final String DESCRIPTION = "wip text";
     
     // =============== INPUT TEXTURE LOCATION =================
     
-    // Colors (RGB)
+
     // Character Color
-    public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
+    //public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f); SAVE FOR FUTURE USE-----------------
     public static final Color RECODE_ORANGE = CardHelper.getColor(255.0f, 165.0f, 0.0f);
     
     // Potion Colors in RGB
@@ -103,54 +72,49 @@ public class DefaultMod implements
     public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
     public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
     
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
+
   
-    // Card backgrounds - The actual rectangular card.
-    private static final String ATTACK_DEFAULT_GRAY = "recodeResources/images/512/bg_attack_default_gray.png";
+    // Card backgrounds
+
     private static final String ATTACK_RECODE_ORANGE = "recodeResources/images/512/bg_attack_recode_magenta.png";
-    private static final String SKILL_DEFAULT_GRAY = "recodeResources/images/512/bg_skill_default_gray.png";
+
     private static final String SKILL_RECODE_ORANGE = "recodeResources/images/512/bg_skill_recode_magenta.png";
-    private static final String POWER_DEFAULT_GRAY = "recodeResources/images/512/bg_power_default_gray.png";
+
     private static final String POWER_RECODE_ORANGE = "recodeResources/images/512/bg_power_recode_orange.png";
     
-    private static final String ENERGY_ORB_DEFAULT_GRAY = "recodeResources/images/512/card_default_gray_orb.png";
+
     private static final String ENERGY_ORB_RECODE_ORANGE = "recodeResources/images/512/card_default_gray_orb_orange.png";
-    private static final String CARD_ENERGY_ORB = "recodeResources/images/512/card_small_orb.png";
+
     private static final String CARD_ENERGY_ORB_RECODE_ORANGE = "recodeResources/images/512/card_small_orb_orange.png";
     
-    private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "recodeResources/images/1024/bg_attack_default_gray.png";
+
     private static final String ATTACK_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/bg_attack_default_gray.png";
-    private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "recodeResources/images/1024/bg_skill_default_gray.png";
+
     private static final String SKILL_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/bg_skill_default_gray.png";
-    private static final String POWER_DEFAULT_GRAY_PORTRAIT = "recodeResources/images/1024/bg_power_default_gray.png";
+
     private static final String POWER_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/bg_power_default_gray.png";
-    private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "recodeResources/images/1024/card_default_gray_orb.png";
+
     private static final String ENERGY_ORB_RECODE_ORANGE_PORTRAIT = "recodeResources/images/1024/card_default_gray_orb.png";
     
     // Character assets
-    private static final String THE_DEFAULT_BUTTON = "recodeResources/images/charSelect/DefaultCharacterButton.png";
+
     private static final String RECODE_BUTTON = "recodeResources/images/charSelect/crowbotButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "recodeResources/images/charSelect/DefaultCharacterPortraitBG.png";
+
     private static final String RECODE_PORTRAIT = "recodeResources/images/charSelect/defectPortrait.jpg";
-    public static final String THE_DEFAULT_SHOULDER_1 = "recodeResources/images/char/defaultCharacter/shoulder.png";
+
     public static final String RECODE_SHOULDER_1 = "recodeResources/images/char/recode/recode_shoulder_1.png";
-    public static final String THE_DEFAULT_SHOULDER_2 = "recodeResources/images/char/defaultCharacter/shoulder2.png";
+
     public static final String RECODE_SHOULDER_2 = "recodeResources/images/char/recode/recode_shoulder_2.png";
-    public static final String THE_DEFAULT_CORPSE = "recodeResources/images/char/defaultCharacter/corpse.png";
+
     public static final String RECODE_CORPSE = "recodeResources/images/char/recode/Spriter/recode_corpse.png";
     
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "recodeResources/images/Badge.png";
     
     // Atlas and JSON files for the Animations
-    public static final String THE_DEFAULT_SKELETON_ATLAS = "recodeResources/images/char/defaultCharacter/Spriter/skeleton.atlas";
+
     public static final String RECODE_SKELETON_ATLAS = "recodeResources/images/char/recode/Spriter/skeleton.atlas";
-    public static final String THE_DEFAULT_SKELETON_JSON = "recodeResources/images/char/defaultCharacter/Spriter/skeleton.json";
+
     public static final String RECODE_SKELETON_JSON = "recodeResources/images/char/recode/Spriter/skeleton.json";
     
     // =============== MAKE IMAGE PATHS =================
@@ -219,27 +183,8 @@ public class DefaultMod implements
         // Change their locations to reflect your actual ID rather than theDefault. They get loaded before getID is a thing.
         
         logger.info("Done subscribing");
-        
-        logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
+
         logger.info("Creating the color " + Recode.Enums.COLOR_ORANGE.toString ());
-        
-        BaseMod.addColor( TheDefault.Enums.COLOR_GRAY,
-                DEFAULT_GRAY,
-                DEFAULT_GRAY,
-                DEFAULT_GRAY,
-                DEFAULT_GRAY,
-                DEFAULT_GRAY,
-                DEFAULT_GRAY,
-                DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY,
-                SKILL_DEFAULT_GRAY,
-                POWER_DEFAULT_GRAY,
-                ENERGY_ORB_DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY_PORTRAIT,
-                SKILL_DEFAULT_GRAY_PORTRAIT,
-                POWER_DEFAULT_GRAY_PORTRAIT,
-                ENERGY_ORB_DEFAULT_GRAY_PORTRAIT,
-                CARD_ENERGY_ORB);
 
         BaseMod.addColor(Recode.Enums.COLOR_ORANGE,
                 RECODE_ORANGE,
@@ -334,19 +279,14 @@ public class DefaultMod implements
     
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
+
         logger.info("Beginning to edit characters. " + "Add " + Recode.Enums.RECODE.toString());
 
         BaseMod.addCharacter(new Recode("recode", Recode.Enums.RECODE),
                 RECODE_BUTTON, RECODE_PORTRAIT, Recode.Enums.RECODE);
 
-        BaseMod.addCharacter(new TheDefault("theDefault", TheDefault.Enums.THE_DEFAULT),
-                 THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_DEFAULT);
-
-
-        
         receiveEditPotions();
-        logger.info("Added " + TheDefault.Enums.THE_DEFAULT.toString());
+
         logger.info("Added " + Recode.Enums.RECODE.toString());
     }
     
@@ -405,7 +345,7 @@ public class DefaultMod implements
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
         AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
             .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-            .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
+            .playerClass(Recode.Enums.RECODE) // Character specific event
             .create();
 
         // Add the event
@@ -425,7 +365,7 @@ public class DefaultMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, Recode.Enums.RECODE);
         
         logger.info("Done editing potions");
     }
@@ -447,9 +387,9 @@ public class DefaultMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), Recode.Enums.COLOR_ORANGE);
+        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), Recode.Enums.COLOR_ORANGE);
+        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), Recode.Enums.COLOR_ORANGE);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -577,4 +517,6 @@ public class DefaultMod implements
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
     }
+
+
 }

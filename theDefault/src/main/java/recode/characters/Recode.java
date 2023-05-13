@@ -2,7 +2,6 @@ package recode.characters;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.AbstractAnimation;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -14,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -24,14 +24,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import recode.DefaultMod;
 import recode.cards.*;
-import recode.relics.DefaultClickableRelic;
+
 import recode.relics.PlaceholderRelic;
 import recode.relics.PlaceholderRelic2;
 
 import java.util.ArrayList;
 
 import static recode.DefaultMod.*;
-import static recode.characters.Recode.Enums.COLOR_ORANGE;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
@@ -161,10 +160,15 @@ public class Recode extends CustomPlayer {
                 true);
     }
 
+    public void prePrep() {
+        super.prePrep();
+        AbstractDungeon.actionManager.addToBottom ( (AbstractGameAction )new RechargeCoreAction());
+    }
+
     // Starting Deck
     @Override
     public ArrayList<String> getStartingDeck() {
-        ArrayList<String> retVal = new ArrayList();
+        ArrayList<String> retVal = new ArrayList<>();
         retVal.add(Strike_Re.ID);
         retVal.add("Strike_B");
         retVal.add("Strike_B");
@@ -245,7 +249,7 @@ public class Recode extends CustomPlayer {
     //Which card should be obtainable from the Match and Keep event?
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new DefaultCommonAttack();
+        return new Strike_Re ();
     }
 
     // The class name as it appears next to your player name in-game
