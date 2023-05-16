@@ -1,7 +1,58 @@
 {
-
   "recode:Strike_Re": {
     "NAME": "Strike",
-    "DESCRIPTION": "wip"
-          }
+    "DESCRIPTION": "Deal !D! Damage"
+  },
+  "recode:Vengeful_Strike": {
+    "NAME": "Vengeful Strike",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, deal !M! damage again."
+  },
+  "recode:Defend_Re": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block"
+  },
+  "recode:Code_Shatter": {
+    "NAME": "Code Shatter",
+    "DESCRIPTION": "Deal !D! damage to all enemies NL Apply !M! Vulnerable to all enemies and yourself."
+  },
+  "recode:Rage_Reboot": {
+    "NAME": "Rage Reboot",
+    "DESCRIPTION": "Lose !M! HP NL Deal !D! Damage. NL Draw 1 Card"
+  },
+  "recode:Backlash_Protocol": {
+    "NAME": "Backlash Protocol",
+    "DESCRIPTION": "Deal !D! damage. If the enemy has Weak, deal an additional !M! damage."
+  },
+  "recode:Virus_Assault": {
+    "NAME": "Virus Assault",
+    "DESCRIPTION": "Deal !D! damage. Apply !M! Weak."
+  },
+  "recode:Firewall_Fissure": {
+    "NAME": "Firewall Fissure",
+    "DESCRIPTION": "Deal !D! damage. If the enemy has Block, deal an additional !M! damage."
+  },
+  "recode:Binary_Bash": {
+    "NAME": "Binary Bash",
+    "DESCRIPTION": "Deal !D! damage. Increase the damage of all Binary Bash cards by !M! for the rest of the combat."
+  },
+  "recode:Destructive_Debug": {
+    "NAME": "Destructive Debug",
+    "DESCRIPTION": "Deal !D! damage. Apply !M! Weak."
+  },
+  "recode:Binary_Exception": {
+    "NAME": "Binary Exception",
+    "DESCRIPTION": "Deal !D! damage. Create !M! copies of Binary Bash and add them to the discard pile. Exhaust."},
+  "recode:Defragment_Destruction": {
+    "NAME": "Defragment Destruction",
+    "DESCRIPTION": "Deal !D! damage to all enemies. Create !M! Fragments that shuffle into the deck.  Exhaust."
+  },
+  "recode:Fragment": {
+    "NAME": "Fragment",
+    "DESCRIPTION": "Deal !D! Damage Gain !B! Block"}
 }
+
+
+
+
+
+

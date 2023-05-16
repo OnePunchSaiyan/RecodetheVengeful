@@ -31,6 +31,7 @@ import recode.relics.PlaceholderRelic2;
 import java.util.ArrayList;
 
 import static recode.DefaultMod.*;
+import static recode.characters.Recode.Enums.COLOR_ORANGE;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
@@ -53,6 +54,10 @@ public class Recode extends CustomPlayer {
         public static AbstractCard.CardColor COLOR_ORANGE;
         @SpireEnum(name = "RECODE_ORANGE_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+        @SpireEnum
+        public static AbstractCard.CardTags DEBUFF_STRIKE;
+        public static AbstractCard.CardTags BINARY_BASH;
+
     }
 
     // =============== CHARACTER ENUMERATORS  =================
@@ -160,25 +165,22 @@ public class Recode extends CustomPlayer {
                 true);
     }
 
-    public void prePrep() {
-        super.prePrep();
-        AbstractDungeon.actionManager.addToBottom ( (AbstractGameAction )new RechargeCoreAction());
-    }
+
 
     // Starting Deck
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(Strike_Re.ID);
-        retVal.add("Strike_B");
-        retVal.add("Strike_B");
-        retVal.add("Strike_B");
-        retVal.add("Defend_B");
-        retVal.add("Defend_B");
-        retVal.add("Defend_B");
-        retVal.add("Defend_B");
-        retVal.add("Zap");
-        retVal.add("Dualcast");
+        retVal.add(Strike_Re.ID);
+        retVal.add(Strike_Re.ID);
+        retVal.add(Strike_Re.ID);
+        retVal.add(Defend_Re.ID);
+        retVal.add(Defend_Re.ID);
+        retVal.add(Defend_Re.ID);
+        retVal.add(Defend_Re.ID);
+        retVal.add(Vengeful_Strike.ID);
+        retVal.add(Code_Shatter.ID);
         return retVal;
     }
 
@@ -187,14 +189,11 @@ public class Recode extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
 
         retVal.add(PlaceholderRelic.ID);
-        retVal.add(PlaceholderRelic2.ID);
-        retVal.add("Brimstone");
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
         UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
         UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen("Brimstone");
 
         return retVal;
     }
@@ -202,7 +201,7 @@ public class Recode extends CustomPlayer {
     // character Select screen effect
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("ATTACK_DAGGER_1", 1.25f); // Sound Effect
+        CardCrawlGame.sound.playA("POWER_MANTRA", 1.25f); // Sound Effect
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false); // Screen Effect
     }
@@ -223,7 +222,7 @@ public class Recode extends CustomPlayer {
     // Should return the card color enum to be associated with your character.
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return AbstractCard.CardColor.BLUE;
+        return COLOR_ORANGE;
 
     }
 

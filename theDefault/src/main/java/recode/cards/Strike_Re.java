@@ -21,7 +21,7 @@ public class Strike_Re extends AbstractDynamicCard {
     public static final String IMG = makeCardPath ( "Strike_Re.png" );
 
 
-    private static final CardRarity RARITY = CardRarity.COMMON; //  Up to you, I like auto-complete on these
+    private static final CardRarity RARITY = CardRarity.BASIC; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.ENEMY;  //   since they don't change much.
     private static final CardType TYPE = CardType.ATTACK;       //
     public static final CardColor COLOR = COLOR_ORANGE;
@@ -38,6 +38,7 @@ public class Strike_Re extends AbstractDynamicCard {
     public Strike_Re () { // public Strike_Re() - This one and the one right under the imports are the most important ones, don't forget them
         super ( ID , IMG , COST , TYPE , COLOR , RARITY , TARGET );
         baseDamage = DAMAGE;
+                    this.tags.add ( CardTags.STARTER_STRIKE);
     }
 
 
