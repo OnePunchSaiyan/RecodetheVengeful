@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import recode.DefaultMod;
 
-
-
 import static recode.DefaultMod.makeCardPath;
 import static recode.characters.Recode.Enums.COLOR_ORANGE;
 public class Strike_Re extends AbstractDynamicCard {

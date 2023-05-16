@@ -1,6 +1,5 @@
 package recode.cards;
 
-import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,7 +8,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import recode.DefaultMod;
-import recode.characters.Recode;
 
 import static recode.DefaultMod.makeCardPath;
 import static recode.characters.Recode.Enums.COLOR_ORANGE;

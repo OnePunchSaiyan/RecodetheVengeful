@@ -6,11 +6,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import recode.DefaultMod;
-import recode.characters.Recode;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import static recode.DefaultMod.makeCardPath;
 import static recode.characters.Recode.Enums.COLOR_ORANGE;

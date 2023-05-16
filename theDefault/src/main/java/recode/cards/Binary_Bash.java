@@ -3,17 +3,15 @@ package recode.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.defect.GashAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import recode.DefaultMod;
-import recode.characters.Recode;
 
 import static recode.DefaultMod.makeCardPath;
 import static recode.cards.AbstractBashClaw.BashInc;
-import static recode.characters.Recode.Enums.*;
+import static recode.characters.Recode.Enums.BINARY_BASH;
+import static recode.characters.Recode.Enums.COLOR_ORANGE;
 
 public class Binary_Bash extends AbstractDynamicCard {
 
